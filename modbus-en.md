@@ -44,11 +44,13 @@ Example: http://192.168.0.77/api/set?men=true
 
 ## Modbus Profile
 
-Voltage L1
-Voltage L2
-Voltage L3
-Voltage N
-Frequency
+| Register                   | Registertype | Datatype  | Name       | Unit      | Description          |
+| -------------------------- | ------------ | --------- | ---------- | --------- | -------------------- |
+| 30001 (0) <br /> 30002 (1) | Input        | Float32   | Voltage L1 | V (Volt)  |                      |
+| 30003 (2) <br /> 30004 (3) | Input        | Float32   | Voltage L2 | V (Volt)  |                      |
+| 30005 (4) <br /> 30006 (5) | Input        | Float32   | Voltage L3 | V (Volt)  |                      |
+| 30007 (6) <br /> 30008 (7) | Input        | Float32   | Voltage N  | V (Volt)  |                      |
+| 30009 (8) <br /> 30010 (9) | Input        | Float32   | Frequency  | Hz (Herz) |                      |
 Current Sensor 1 Current
 Current Sensor 2 Current
 Current Sensor 3 Current
