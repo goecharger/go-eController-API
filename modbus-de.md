@@ -46,11 +46,11 @@ Beispiel: http://192.168.0.77/api/set?men=true
 
 | Register                                                             | Registertyp  | Datentyp  | Name                          | Einheit          | Beschreibung         |
 | -------------------------------------------------------------------- | ------------ | --------- | ----------------------------- | ---------------- | -------------------- |
-| 30001 (0 <br /> 30002 (1                                             | Input        | Float32   | Voltage L1                    | V (Volt)         |                      |
-| 30003 (2 <br /> 30004 (3                                             | Input        | Float32   | Voltage L2                    | V (Volt)         |                      |
-| 30005 (4 <br /> 30006 (5                                             | Input        | Float32   | Voltage L3                    | V (Volt)         |                      |
-| 30007 (6 <br /> 30008 (7                                             | Input        | Float32   | Voltage N                     | V (Volt)         |                      |
-| 30009 (8 <br /> 30010 (9                                             | Input        | Float32   | Frequency                     | Hz (Herz)        |                      |
+| 30001 (0) <br /> 30002 (1)                                           | Input        | Float32   | Voltage L1                    | V (Volt)         |                      |
+| 30003 (2) <br /> 30004 (3)                                           | Input        | Float32   | Voltage L2                    | V (Volt)         |                      |
+| 30005 (4) <br /> 30006 (5)                                           | Input        | Float32   | Voltage L3                    | V (Volt)         |                      |
+| 30007 (6) <br /> 30008 (7)                                           | Input        | Float32   | Voltage N                     | V (Volt)         |                      |
+| 30009 (8) <br /> 30010 (9)                                           | Input        | Float32   | Frequency                     | Hz (Herz)        |                      |
 | 30011 (10) <br /> 30012 (11)                                         | Input        | Float32   | Current Sensor 1 Current      | A (Ampere)       |                      |
 | 30013 (12) <br /> 30014 (13)                                         | Input        | Float32   | Current Sensor 2 Current      | A (Ampere)       |                      |
 | 30015 (14) <br /> 30016 (15)                                         | Input        | Float32   | Current Sensor 3 Current      | A (Ampere)       |                      |
