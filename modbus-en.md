@@ -75,93 +75,125 @@ Example: http://192.168.0.77/api/set?men=true
 | 30053 (52) <br /> 30054 (53)                                         | Input        | Float32   | Category Home Power           | W (Watt)         |                      |
 | 30055 (54) <br /> 30056 (55) <br /> 30057 (56) <br /> 30058 (57)     | Input        | Float64   | Category Home Energy In       | Wh (Watt-Hours)  |                      |
 | 30059 (58) <br /> 30060 (59) <br /> 30061 (60) <br /> 30062 (61)     | Input        | Float64   | Category Home Energy Out      | Wh (Watt-Hours)  |                      |
-| 30063 (62) <br /> 30064 (63)                                         | Input        | Float32   | Category Grid Current L1      | A (Ampere)       |                      |
-| 30065 (64) <br /> 30066 (65)                                         | Input        | Float32   | Category Grid Current L2      | A (Ampere)       |                      |
-| 30067 (66) <br /> 30068 (67)                                         | Input        | Float32   | Category Grid Current L3      | A (Ampere)       |                      |
-| 30069 (68) <br /> 30070 (69)                                         | Input        | Float32   | Category Grid Power           | W (Watt)         |                      |
-| 30071 (70) <br /> 30072 (71) <br /> 30073 (72) <br /> 30074 (73)     | Input        | Float64   | Category Grid Energy In       | Wh (Watt-Hours)  |                      |
-| 30075 (74) <br /> 30076 (75) <br /> 30077 (76) <br /> 30078 (77)     | Input        | Float64   | Category Grid Energy Out      | Wh (Watt-Hours)  |                      |
-| 30079 (78) <br /> 30080 (79)                                         | Input        | Float32   | Category Car Current L1       | A (Ampere)       |                      |
-| 30081 (80) <br /> 30082 (81)                                         | Input        | Float32   | Category Car Current L2       | A (Ampere)       |                      |
-| 30083 (82) <br /> 30084 (83)                                         | Input        | Float32   | Category Car Current L3       | A (Ampere)       |                      |
-| 30085 (84) <br /> 30086 (85)                                         | Input        | Float32   | Category Car Power            | W (Watt)         |                      |
-| 30087 (86) <br /> 30088 (87) <br /> 30089 (88) <br /> 30090 (89)     | Input        | Float64   | Category Car Energy In        | Wh (Watt-Hours)  |                      |
-| 30091 (90) <br /> 30092 (91) <br /> 30093 (92) <br /> 30094 (93)     | Input        | Float64   | Category Car Energy Out       | Wh (Watt-Hours)  |                      |
-| 30095 (94) <br /> 30096 (95)                                         | Input        | Float32   | Category Relais Current L1    | A (Ampere)       |                      |
-| 30097 (96) <br /> 30098 (97)                                         | Input        | Float32   | Category Relais Current L2    | A (Ampere)       |                      |
-| 30099 (98) <br /> 30100 (99)                                         | Input        | Float32   | Category Relais Current L3    | A (Ampere)       |                      |
-| 30101 (100) <br /> 30102 (101)                                       | Input        | Float32   | Category Relais Power         | W (Watt)         |                      |
-| 30103 (102) <br /> 30104 (103) <br /> 30105 (104) <br /> 30106 (105) | Input        | Float64   | Category Relais Energy In     | Wh (Watt-Hours)  |                      |
-| 30107 (106) <br /> 30108 (107) <br /> 30109 (108) <br /> 30110 (109) | Input        | Float64   | Category Relais Energy Out    | Wh (Watt-Hours)  |                      |
-| 30111 (110) <br /> 30112 (111)                                       | Input        | Float32   | Category Solar Current L1     | A (Ampere)       |                      |
-| 30113 (112) <br /> 30114 (113)                                       | Input        | Float32   | Category Solar Current L2     | A (Ampere)       |                      |
-| 30115 (114) <br /> 30116 (115)                                       | Input        | Float32   | Category Solar Current L3     | A (Ampere)       |                      |
-| 30117 (116) <br /> 30118 (117)                                       | Input        | Float32   | Category Solar Power          | W (Watt)         |                      |
-| 30119 (118) <br /> 30120 (119) <br /> 30121 (120) <br /> 30122 (121) | Input        | Float64   | Category Solar Energy In      | Wh (Watt-Hours)  |                      |
-| 30123 (122) <br /> 30124 (123) <br /> 30125 (124) <br /> 30126 (125) | Input        | Float64   | Category Solar Energy Out     | Wh (Watt-Hours)  |                      |
-| 30127 (126) <br /> 30128 (127)                                       | Input        | Float32   | Category Akku Current L1      | A (Ampere)       |                      |
-| 30129 (128) <br /> 30130 (129)                                       | Input        | Float32   | Category Akku Current L2      | A (Ampere)       |                      |
-| 30131 (130) <br /> 30132 (131)                                       | Input        | Float32   | Category Akku Current L3      | A (Ampere)       |                      |
-| 30133 (132) <br /> 30134 (133)                                       | Input        | Float32   | Category Akku Power           | W (Watt)         |                      |
-| 30135 (134) <br /> 30136 (135) <br /> 30137 (136) <br /> 30138 (137) | Input        | Float64   | Category Akku Energy In       | Wh (Watt-Hours)  |                      |
-| 30139 (138) <br /> 30140 (139) <br /> 30141 (140) <br /> 30142 (141) | Input        | Float64   | Category Akku Energy Out      | Wh (Watt-Hours)  |                      |
-| 30207 (206) <br /> 30208 (207)                                       | Input        | Float32   | Custom Category 0 Current L1  | A (Ampere)       |                      |
-| 30209 (208) <br /> 30210 (209)                                       | Input        | Float32   | Custom Category 0 Current L2  | A (Ampere)       |                      |
-| 30211 (210) <br /> 30212 (211)                                       | Input        | Float32   | Custom Category 0 Current L3  | A (Ampere)       |                      |
-| 30213 (212) <br /> 30214 (213)                                       | Input        | Float32   | Custom Category 0 Power       | W (Watt)         |                      |
-| 30215 (214) <br /> 30216 (215) <br /> 30217 (216) <br /> 30218 (217) | Input        | Float64   | Custom Category 0 Energy In   | Wh (Watt-Hours)  |                      |
-| 30219 (218) <br /> 30220 (219) <br /> 30221 (220) <br /> 30222 (221) | Input        | Float64   | Custom Category 0 Energy Out  | Wh (Watt-Hours)  |                      |
-| 30223 (222) <br /> 30224 (223)                                       | Input        | Float32   | Custom Category 1 Current L1  | A (Ampere)       |                      |
-| 30225 (224) <br /> 30226 (225)                                       | Input        | Float32   | Custom Category 1 Current L2  | A (Ampere)       |                      |
-| 30227 (226) <br /> 30228 (227)                                       | Input        | Float32   | Custom Category 1 Current L3  | A (Ampere)       |                      |
-| 30229 (228) <br /> 30230 (229)                                       | Input        | Float32   | Custom Category 1 Power       | W (Watt)         |                      |
-| 30231 (230) <br /> 30232 (231) <br /> 30233 (232) <br /> 30234 (233) | Input        | Float64   | Custom Category 1 Energy In   | Wh (Watt-Hours)  |                      |
-| 30235 (234) <br /> 30236 (235) <br /> 30237 (236) <br /> 30238 (237) | Input        | Float64   | Custom Category 1 Energy Out  | Wh (Watt-Hours)  |                      |
-| 30239 (238) <br /> 30240 (239)                                       | Input        | Float32   | Custom Category 2 Current L1  | A (Ampere)       |                      |
-| 30241 (240) <br /> 30242 (241)                                       | Input        | Float32   | Custom Category 2 Current L2  | A (Ampere)       |                      |
-| 30243 (242) <br /> 30244 (243)                                       | Input        | Float32   | Custom Category 2 Current L3  | A (Ampere)       |                      |
-| 30245 (244) <br /> 30246 (245)                                       | Input        | Float32   | Custom Category 2 Power       | W (Watt)         |                      |
-| 30247 (246) <br /> 30248 (247) <br /> 30249 (248) <br /> 30250 (249) | Input        | Float64   | Custom Category 2 Energy In   | Wh (Watt-Hours)  |                      |
-| 30251 (250) <br /> 30252 (251) <br /> 30253 (252) <br /> 30254 (253) | Input        | Float64   | Custom Category 2 Energy Out  | Wh (Watt-Hours)  |                      |
-| 30255 (254) <br /> 30256 (255)                                       | Input        | Float32   | Custom Category 3 Current L1  | A (Ampere)       |                      |
-| 30257 (256) <br /> 30258 (257)                                       | Input        | Float32   | Custom Category 3 Current L2  | A (Ampere)       |                      |
-| 30259 (258) <br /> 30260 (259)                                       | Input        | Float32   | Custom Category 3 Current L3  | A (Ampere)       |                      |
-| 30261 (260) <br /> 30262 (261)                                       | Input        | Float32   | Custom Category 3 Power       | W (Watt)         |                      |
-| 30263 (262) <br /> 30264 (263) <br /> 30265 (264) <br /> 30266 (265) | Input        | Float64   | Custom Category 3 Energy In   | Wh (Watt-Hours)  |                      |
-| 30267 (266) <br /> 30268 (267) <br /> 30269 (268) <br /> 30270 (269) | Input        | Float64   | Custom Category 3 Energy Out  | Wh (Watt-Hours)  |                      |
-| 30271 (270) <br /> 30272 (271)                                       | Input        | Float32   | Custom Category 4 Current L1  | A (Ampere)       |                      |
-| 30273 (272) <br /> 30274 (273)                                       | Input        | Float32   | Custom Category 4 Current L2  | A (Ampere)       |                      |
-| 30275 (274) <br /> 30276 (275)                                       | Input        | Float32   | Custom Category 4 Current L3  | A (Ampere)       |                      |
-| 30277 (276) <br /> 30278 (277)                                       | Input        | Float32   | Custom Category 4 Power       | W (Watt)         |                      |
-| 30279 (278) <br /> 30280 (279) <br /> 30281 (280) <br /> 30282 (281) | Input        | Float64   | Custom Category 4 Energy In   | Wh (Watt-Hours)  |                      |
-| 30283 (282) <br /> 30284 (283) <br /> 30285 (284) <br /> 30286 (285) | Input        | Float64   | Custom Category 4 Energy Out  | Wh (Watt-Hours)  |                      |
-| 30287 (286) <br /> 30288 (287)                                       | Input        | Float32   | Custom Category 5 Current L1  | A (Ampere)       |                      |
-| 30289 (288) <br /> 30290 (289)                                       | Input        | Float32   | Custom Category 5 Current L2  | A (Ampere)       |                      |
-| 30291 (290) <br /> 30292 (291)                                       | Input        | Float32   | Custom Category 5 Current L3  | A (Ampere)       |                      |
-| 30293 (292) <br /> 30294 (293)                                       | Input        | Float32   | Custom Category 5 Power       | W (Watt)         |                      |
-| 30295 (294) <br /> 30296 (295) <br /> 30297 (296) <br /> 30298 (297) | Input        | Float64   | Custom Category 5 Energy In   | Wh (Watt-Hours)  |                      |
-| 30299 (298) <br /> 30300 (299) <br /> 30301 (300) <br /> 30302 (301) | Input        | Float64   | Custom Category 5 Energy Out  | Wh (Watt-Hours)  |                      |
-| 30303 (302) <br /> 30304 (303)                                       | Input        | Float32   | Custom Category 6 Current L1  | A (Ampere)       |                      |
-| 30305 (304) <br /> 30306 (305)                                       | Input        | Float32   | Custom Category 6 Current L2  | A (Ampere)       |                      |
-| 30307 (306) <br /> 30308 (307)                                       | Input        | Float32   | Custom Category 6 Current L3  | A (Ampere)       |                      |
-| 30309 (308) <br /> 30310 (309)                                       | Input        | Float32   | Custom Category 6 Power       | W (Watt)         |                      |
-| 30311 (310) <br /> 30312 (311) <br /> 30313 (312) <br /> 30314 (313) | Input        | Float64   | Custom Category 6 Energy In   | Wh (Watt-Hours)  |                      |
-| 30315 (314) <br /> 30316 (315) <br /> 30317 (316) <br /> 30318 (317) | Input        | Float64   | Custom Category 6 Energy Out  | Wh (Watt-Hours)  |                      |
-| 30319 (318) <br /> 30320 (319)                                       | Input        | Float32   | Custom Category 7 Current L1  | A (Ampere)       |                      |
-| 30321 (320) <br /> 30322 (321)                                       | Input        | Float32   | Custom Category 7 Current L2  | A (Ampere)       |                      |
-| 30323 (322) <br /> 30324 (323)                                       | Input        | Float32   | Custom Category 7 Current L3  | A (Ampere)       |                      |
-| 30325 (324) <br /> 30326 (325)                                       | Input        | Float32   | Custom Category 7 Power       | W (Watt)         |                      |
-| 30327 (326) <br /> 30328 (327) <br /> 30329 (328) <br /> 30330 (329) | Input        | Float64   | Custom Category 7 Energy In   | Wh (Watt-Hours)  |                      |
-| 30331 (330) <br /> 30332 (331) <br /> 30333 (332) <br /> 30334 (333) | Input        | Float64   | Custom Category 7 Energy Out  | Wh (Watt-Hours)  |                      |
-| 30335 (334) <br /> 30336 (335)                                       | Input        | Float32   | Custom Category 8 Current L1  | A (Ampere)       |                      |
-| 30337 (336) <br /> 30338 (337)                                       | Input        | Float32   | Custom Category 8 Current L2  | A (Ampere)       |                      |
-| 30339 (338) <br /> 30340 (339)                                       | Input        | Float32   | Custom Category 8 Current L3  | A (Ampere)       |                      |
-| 30341 (340) <br /> 30342 (341)                                       | Input        | Float32   | Custom Category 8 Power       | W (Watt)         |                      |
-| 30343 (342) <br /> 30344 (343) <br /> 30345 (344) <br /> 30346 (345) | Input        | Float64   | Custom Category 8 Energy In   | Wh (Watt-Hours)  |                      |
-| 30347 (346) <br /> 30348 (347) <br /> 30349 (348) <br /> 30350 (349) | Input        | Float64   | Custom Category 8 Energy Out  | Wh (Watt-Hours)  |                      |
-| 30351 (350) <br /> 30352 (351)                                       | Input        | Float32   | Custom Category 9 Current L1  | A (Ampere)       |                      |
-| 30353 (352) <br /> 30354 (353)                                       | Input        | Float32   | Custom Category 9 Current L2  | A (Ampere)       |                      |
-| 30355 (354) <br /> 30356 (355)                                       | Input        | Float32   | Custom Category 9 Current L3  | A (Ampere)       |                      |
-| 30357 (356) <br /> 30358 (357)                                       | Input        | Float32   | Custom Category 9 Power       | W (Watt)         |                      |
-| 30359 (358) <br /> 30360 (359) <br /> 30361 (360) <br /> 30362 (361) | Input        | Float64   | Custom Category 9 Energy In   | Wh (Watt-Hours)  |                      |
-| 30363 (362) <br /> 30364 (363) <br /> 30365 (364) <br /> 30366 (365) | Input        | Float64   | Custom Category 9 Energy Out  | Wh (Watt-Hours)  |                      |
+| 30063 (54) <br /> 30064 (55) <br /> 30065 (56) <br /> 30066 (57)     | Input        | Float64   | Category Home Money In        | Money            |                      |
+| 30067 (58) <br /> 30068 (59) <br /> 30069 (60) <br /> 30070 (61)     | Input        | Float64   | Category Home Money Out       | Money            |                      |
+| 30071 (62) <br /> 30072 (63)                                         | Input        | Float32   | Category Grid Current L1      | A (Ampere)       |                      |
+| 30073 (64) <br /> 30074 (65)                                         | Input        | Float32   | Category Grid Current L2      | A (Ampere)       |                      |
+| 30075 (66) <br /> 30076 (67)                                         | Input        | Float32   | Category Grid Current L3      | A (Ampere)       |                      |
+| 30077 (68) <br /> 30078 (69)                                         | Input        | Float32   | Category Grid Power           | W (Watt)         |                      |
+| 30079 (70) <br /> 30080 (71) <br /> 30081 (72) <br /> 30082 (73)     | Input        | Float64   | Category Grid Energy In       | Wh (Watt-Hours)  |                      |
+| 30083 (74) <br /> 30084 (75) <br /> 30085 (76) <br /> 30086 (77)     | Input        | Float64   | Category Grid Energy Out      | Wh (Watt-Hours)  |                      |
+| 30087 (70) <br /> 30088 (71) <br /> 30089 (72) <br /> 30090 (73)     | Input        | Float64   | Category Grid Money In        | Money            |                      |
+| 30091 (74) <br /> 30092 (75) <br /> 30093 (76) <br /> 30094 (77)     | Input        | Float64   | Category Grid Money Out       | Money            |                      |
+| 30095 (78) <br /> 30096 (79)                                         | Input        | Float32   | Category Car Current L1       | A (Ampere)       |                      |
+| 30097 (80) <br /> 30098 (81)                                         | Input        | Float32   | Category Car Current L2       | A (Ampere)       |                      |
+| 30099 (82) <br /> 30100 (83)                                         | Input        | Float32   | Category Car Current L3       | A (Ampere)       |                      |
+| 30101 (84) <br /> 30102 (85)                                         | Input        | Float32   | Category Car Power            | W (Watt)         |                      |
+| 30103 (86) <br /> 30104 (87) <br /> 30105 (88) <br /> 30106 (89)     | Input        | Float64   | Category Car Energy In        | Wh (Watt-Hours)  |                      |
+| 30107 (90) <br /> 30108 (91) <br /> 30109 (92) <br /> 30110 (93)     | Input        | Float64   | Category Car Energy Out       | Wh (Watt-Hours)  |                      |
+| 30111 (86) <br /> 30112 (87) <br /> 30113 (88) <br /> 30114 (89)     | Input        | Float64   | Category Car Money In         | Money            |                      |
+| 30115 (90) <br /> 30116 (91) <br /> 30117 (92) <br /> 30118 (93)     | Input        | Float64   | Category Car Money Out        | Money            |                      |
+| 30119 (94) <br /> 30120 (95)                                         | Input        | Float32   | Category Relais Current L1    | A (Ampere)       |                      |
+| 30121 (96) <br /> 30122 (97)                                         | Input        | Float32   | Category Relais Current L2    | A (Ampere)       |                      |
+| 30123 (98) <br /> 30124 (99)                                         | Input        | Float32   | Category Relais Current L3    | A (Ampere)       |                      |
+| 30125 (100) <br /> 30126 (101)                                       | Input        | Float32   | Category Relais Power         | W (Watt)         |                      |
+| 30127 (102) <br /> 30128 (103) <br /> 30129 (104) <br /> 30130 (105) | Input        | Float64   | Category Relais Energy In     | Wh (Watt-Hours)  |                      |
+| 30131 (106) <br /> 30132 (107) <br /> 30133 (108) <br /> 30134 (109) | Input        | Float64   | Category Relais Energy Out    | Wh (Watt-Hours)  |                      |
+| 30135 (102) <br /> 30136 (103) <br /> 30137 (104) <br /> 30138 (105) | Input        | Float64   | Category Relais Money In      | Money            |                      |
+| 30139 (106) <br /> 30140 (107) <br /> 30141 (108) <br /> 30142 (109) | Input        | Float64   | Category Relais Money Out     | Money            |                      |
+| 30143 (110) <br /> 30144 (111)                                       | Input        | Float32   | Category Solar Current L1     | A (Ampere)       |                      |
+| 30145 (112) <br /> 30146 (113)                                       | Input        | Float32   | Category Solar Current L2     | A (Ampere)       |                      |
+| 30147 (114) <br /> 30148 (115)                                       | Input        | Float32   | Category Solar Current L3     | A (Ampere)       |                      |
+| 30149 (116) <br /> 30150 (117)                                       | Input        | Float32   | Category Solar Power          | W (Watt)         |                      |
+| 30151 (118) <br /> 30152 (119) <br /> 30153 (120) <br /> 30154 (121) | Input        | Float64   | Category Solar Energy In      | Wh (Watt-Hours)  |                      |
+| 30155 (122) <br /> 30156 (123) <br /> 30157 (124) <br /> 30158 (125) | Input        | Float64   | Category Solar Energy Out     | Wh (Watt-Hours)  |                      |
+| 30159 (118) <br /> 30160 (119) <br /> 30161 (120) <br /> 30162 (121) | Input        | Float64   | Category Solar Money In       | Money            |                      |
+| 30163 (122) <br /> 30164 (123) <br /> 30165 (124) <br /> 30166 (125) | Input        | Float64   | Category Solar Money Out      | Money            |                      |
+| 30167 (126) <br /> 30168 (127)                                       | Input        | Float32   | Category Akku Current L1      | A (Ampere)       |                      |
+| 30169 (128) <br /> 30170 (129)                                       | Input        | Float32   | Category Akku Current L2      | A (Ampere)       |                      |
+| 30171 (130) <br /> 30172 (131)                                       | Input        | Float32   | Category Akku Current L3      | A (Ampere)       |                      |
+| 30173 (132) <br /> 30174 (133)                                       | Input        | Float32   | Category Akku Power           | W (Watt)         |                      |
+| 30175 (134) <br /> 30176 (135) <br /> 30177 (136) <br /> 30178 (137) | Input        | Float64   | Category Akku Energy In       | Wh (Watt-Hours)  |                      |
+| 30179 (138) <br /> 30180 (139) <br /> 30181 (140) <br /> 30182 (141) | Input        | Float64   | Category Akku Energy Out      | Wh (Watt-Hours)  |                      |
+| 30183 (134) <br /> 30184 (135) <br /> 30185 (136) <br /> 30186 (137) | Input        | Float64   | Category Akku Money In        | Money            |                      |
+| 30187 (138) <br /> 30188 (139) <br /> 30189 (140) <br /> 30190 (141) | Input        | Float64   | Category Akku Money Out       | Money            |                      |
+| 30287 (206) <br /> 30288 (207)                                       | Input        | Float32   | Custom Category 0 Current L1  | A (Ampere)       |                      |
+| 30289 (208) <br /> 30290 (209)                                       | Input        | Float32   | Custom Category 0 Current L2  | A (Ampere)       |                      |
+| 30291 (210) <br /> 30292 (211)                                       | Input        | Float32   | Custom Category 0 Current L3  | A (Ampere)       |                      |
+| 30293 (212) <br /> 30294 (213)                                       | Input        | Float32   | Custom Category 0 Power       | W (Watt)         |                      |
+| 30295 (214) <br /> 30296 (215) <br /> 30297 (216) <br /> 30298 (217) | Input        | Float64   | Custom Category 0 Energy In   | Wh (Watt-Hours)  |                      |
+| 30299 (218) <br /> 30300 (219) <br /> 30301 (220) <br /> 30302 (221) | Input        | Float64   | Custom Category 0 Energy Out  | Wh (Watt-Hours)  |                      |
+| 30303 (214) <br /> 30304 (215) <br /> 30305 (216) <br /> 30306 (217) | Input        | Float64   | Custom Category 0 Money In    | Money            |                      |
+| 30307 (218) <br /> 30308 (219) <br /> 30309 (220) <br /> 30310 (221) | Input        | Float64   | Custom Category 0 Money Out   | Money            |                      |
+| 30311 (222) <br /> 30312 (223)                                       | Input        | Float32   | Custom Category 1 Current L1  | A (Ampere)       |                      |
+| 30313 (224) <br /> 30314 (225)                                       | Input        | Float32   | Custom Category 1 Current L2  | A (Ampere)       |                      |
+| 30315 (226) <br /> 30316 (227)                                       | Input        | Float32   | Custom Category 1 Current L3  | A (Ampere)       |                      |
+| 30317 (228) <br /> 30318 (229)                                       | Input        | Float32   | Custom Category 1 Power       | W (Watt)         |                      |
+| 30319 (230) <br /> 30320 (231) <br /> 30321 (232) <br /> 30322 (233) | Input        | Float64   | Custom Category 1 Energy In   | Wh (Watt-Hours)  |                      |
+| 30323 (234) <br /> 30324 (235) <br /> 30325 (236) <br /> 30326 (237) | Input        | Float64   | Custom Category 1 Energy Out  | Wh (Watt-Hours)  |                      |
+| 30327 (230) <br /> 30328 (231) <br /> 30329 (232) <br /> 30330 (233) | Input        | Float64   | Custom Category 1 Money In    | Money            |                      |
+| 30331 (234) <br /> 30332 (235) <br /> 30333 (236) <br /> 30334 (237) | Input        | Float64   | Custom Category 1 Money Out   | Money            |                      |
+| 30335 (238) <br /> 30336 (239)                                       | Input        | Float32   | Custom Category 2 Current L1  | A (Ampere)       |                      |
+| 30337 (240) <br /> 30338 (241)                                       | Input        | Float32   | Custom Category 2 Current L2  | A (Ampere)       |                      |
+| 30339 (242) <br /> 30340 (243)                                       | Input        | Float32   | Custom Category 2 Current L3  | A (Ampere)       |                      |
+| 30341 (244) <br /> 30342 (245)                                       | Input        | Float32   | Custom Category 2 Power       | W (Watt)         |                      |
+| 30343 (246) <br /> 30344 (247) <br /> 30345 (248) <br /> 30346 (249) | Input        | Float64   | Custom Category 2 Energy In   | Wh (Watt-Hours)  |                      |
+| 30347 (250) <br /> 30348 (251) <br /> 30349 (252) <br /> 30350 (253) | Input        | Float64   | Custom Category 2 Energy Out  | Wh (Watt-Hours)  |                      |
+| 30351 (246) <br /> 30352 (247) <br /> 30353 (248) <br /> 30354 (249) | Input        | Float64   | Custom Category 2 Money In    | Money            |                      |
+| 30355 (250) <br /> 30356 (251) <br /> 30357 (252) <br /> 30358 (253) | Input        | Float64   | Custom Category 2 Money Out   | Money            |                      |
+| 30359 (254) <br /> 30360 (255)                                       | Input        | Float32   | Custom Category 3 Current L1  | A (Ampere)       |                      |
+| 30361 (256) <br /> 30362 (257)                                       | Input        | Float32   | Custom Category 3 Current L2  | A (Ampere)       |                      |
+| 30363 (258) <br /> 30364 (259)                                       | Input        | Float32   | Custom Category 3 Current L3  | A (Ampere)       |                      |
+| 30365 (260) <br /> 30366 (261)                                       | Input        | Float32   | Custom Category 3 Power       | W (Watt)         |                      |
+| 30367 (262) <br /> 30368 (263) <br /> 30369 (264) <br /> 30370 (265) | Input        | Float64   | Custom Category 3 Energy In   | Wh (Watt-Hours)  |                      |
+| 30371 (266) <br /> 30372 (267) <br /> 30373 (268) <br /> 30374 (269) | Input        | Float64   | Custom Category 3 Energy Out  | Wh (Watt-Hours)  |                      |
+| 30375 (262) <br /> 30376 (263) <br /> 30377 (264) <br /> 30378 (265) | Input        | Float64   | Custom Category 3 Money In    | Money            |                      |
+| 30379 (266) <br /> 30380 (267) <br /> 30381 (268) <br /> 30382 (269) | Input        | Float64   | Custom Category 3 Money Out   | Money            |                      |
+| 30383 (270) <br /> 30384 (271)                                       | Input        | Float32   | Custom Category 4 Current L1  | A (Ampere)       |                      |
+| 30385 (272) <br /> 30386 (273)                                       | Input        | Float32   | Custom Category 4 Current L2  | A (Ampere)       |                      |
+| 30387 (274) <br /> 30388 (275)                                       | Input        | Float32   | Custom Category 4 Current L3  | A (Ampere)       |                      |
+| 30389 (276) <br /> 30390 (277)                                       | Input        | Float32   | Custom Category 4 Power       | W (Watt)         |                      |
+| 30391 (278) <br /> 30392 (279) <br /> 30393 (280) <br /> 30394 (281) | Input        | Float64   | Custom Category 4 Energy In   | Wh (Watt-Hours)  |                      |
+| 30395 (282) <br /> 30396 (283) <br /> 30397 (284) <br /> 30398 (285) | Input        | Float64   | Custom Category 4 Energy Out  | Wh (Watt-Hours)  |                      |
+| 30399 (278) <br /> 30400 (279) <br /> 30401 (280) <br /> 30402 (281) | Input        | Float64   | Custom Category 4 Money In    | Money            |                      |
+| 30403 (282) <br /> 30404 (283) <br /> 30405 (284) <br /> 30406 (285) | Input        | Float64   | Custom Category 4 Money Out   | Money            |                      |
+| 30407 (286) <br /> 30408 (287)                                       | Input        | Float32   | Custom Category 5 Current L1  | A (Ampere)       |                      |
+| 30409 (288) <br /> 30410 (289)                                       | Input        | Float32   | Custom Category 5 Current L2  | A (Ampere)       |                      |
+| 30411 (290) <br /> 30412 (291)                                       | Input        | Float32   | Custom Category 5 Current L3  | A (Ampere)       |                      |
+| 30413 (292) <br /> 30414 (293)                                       | Input        | Float32   | Custom Category 5 Power       | W (Watt)         |                      |
+| 30415 (294) <br /> 30416 (295) <br /> 30417 (296) <br /> 30418 (297) | Input        | Float64   | Custom Category 5 Energy In   | Wh (Watt-Hours)  |                      |
+| 30419 (298) <br /> 30420 (299) <br /> 30421 (300) <br /> 30422 (301) | Input        | Float64   | Custom Category 5 Energy Out  | Wh (Watt-Hours)  |                      |
+| 30423 (294) <br /> 30424 (295) <br /> 30425 (296) <br /> 30426 (297) | Input        | Float64   | Custom Category 5 Money In    | Money            |                      |
+| 30427 (298) <br /> 30428 (299) <br /> 30429 (300) <br /> 30430 (301) | Input        | Float64   | Custom Category 5 Money Out   | Money            |                      |
+| 30431 (302) <br /> 30432 (303)                                       | Input        | Float32   | Custom Category 6 Current L1  | A (Ampere)       |                      |
+| 30433 (304) <br /> 30434 (305)                                       | Input        | Float32   | Custom Category 6 Current L2  | A (Ampere)       |                      |
+| 30435 (306) <br /> 30436 (307)                                       | Input        | Float32   | Custom Category 6 Current L3  | A (Ampere)       |                      |
+| 30437 (308) <br /> 30438 (309)                                       | Input        | Float32   | Custom Category 6 Power       | W (Watt)         |                      |
+| 30439 (310) <br /> 30440 (311) <br /> 30441 (312) <br /> 30442 (313) | Input        | Float64   | Custom Category 6 Energy In   | Wh (Watt-Hours)  |                      |
+| 30443 (314) <br /> 30444 (315) <br /> 30445 (316) <br /> 30446 (317) | Input        | Float64   | Custom Category 6 Energy Out  | Wh (Watt-Hours)  |                      |
+| 30447 (310) <br /> 30448 (311) <br /> 30449 (312) <br /> 30450 (313) | Input        | Float64   | Custom Category 6 Money In    | Money            |                      |
+| 30451 (314) <br /> 30452 (315) <br /> 30453 (316) <br /> 30454 (317) | Input        | Float64   | Custom Category 6 Money Out   | Money            |                      |
+| 30455 (318) <br /> 30456 (319)                                       | Input        | Float32   | Custom Category 7 Current L1  | A (Ampere)       |                      |
+| 30457 (320) <br /> 30458 (321)                                       | Input        | Float32   | Custom Category 7 Current L2  | A (Ampere)       |                      |
+| 30459 (322) <br /> 30460 (323)                                       | Input        | Float32   | Custom Category 7 Current L3  | A (Ampere)       |                      |
+| 30461 (324) <br /> 30462 (325)                                       | Input        | Float32   | Custom Category 7 Power       | W (Watt)         |                      |
+| 30463 (326) <br /> 30464 (327) <br /> 30465 (328) <br /> 30466 (329) | Input        | Float64   | Custom Category 7 Energy In   | Wh (Watt-Hours)  |                      |
+| 30467 (330) <br /> 30468 (331) <br /> 30469 (332) <br /> 30470 (333) | Input        | Float64   | Custom Category 7 Energy Out  | Wh (Watt-Hours)  |                      |
+| 30471 (326) <br /> 30472 (327) <br /> 30473 (328) <br /> 30474 (329) | Input        | Float64   | Custom Category 7 Money In    | Money            |                      |
+| 30475 (330) <br /> 30476 (331) <br /> 30477 (332) <br /> 30478 (333) | Input        | Float64   | Custom Category 7 Money Out   | Money            |                      |
+| 30479 (334) <br /> 30480 (335)                                       | Input        | Float32   | Custom Category 8 Current L1  | A (Ampere)       |                      |
+| 30481 (336) <br /> 30482 (337)                                       | Input        | Float32   | Custom Category 8 Current L2  | A (Ampere)       |                      |
+| 30483 (338) <br /> 30484 (339)                                       | Input        | Float32   | Custom Category 8 Current L3  | A (Ampere)       |                      |
+| 30485 (340) <br /> 30486 (341)                                       | Input        | Float32   | Custom Category 8 Power       | W (Watt)         |                      |
+| 30487 (342) <br /> 30488 (343) <br /> 30489 (344) <br /> 30490 (345) | Input        | Float64   | Custom Category 8 Energy In   | Wh (Watt-Hours)  |                      |
+| 30491 (346) <br /> 30492 (347) <br /> 30493 (348) <br /> 30494 (349) | Input        | Float64   | Custom Category 8 Energy Out  | Wh (Watt-Hours)  |                      |
+| 30495 (342) <br /> 30496 (343) <br /> 30497 (344) <br /> 30498 (345) | Input        | Float64   | Custom Category 8 Money In    | Money            |                      |
+| 30499 (346) <br /> 30500 (347) <br /> 30501 (348) <br /> 30502 (349) | Input        | Float64   | Custom Category 8 Money Out   | Money            |                      |
+| 30503 (350) <br /> 30504 (351)                                       | Input        | Float32   | Custom Category 9 Current L1  | A (Ampere)       |                      |
+| 30505 (352) <br /> 30506 (353)                                       | Input        | Float32   | Custom Category 9 Current L2  | A (Ampere)       |                      |
+| 30507 (354) <br /> 30508 (355)                                       | Input        | Float32   | Custom Category 9 Current L3  | A (Ampere)       |                      |
+| 30509 (356) <br /> 30510 (357)                                       | Input        | Float32   | Custom Category 9 Power       | W (Watt)         |                      |
+| 30511 (358) <br /> 30512 (359) <br /> 30513 (360) <br /> 30514 (361) | Input        | Float64   | Custom Category 9 Energy In   | Wh (Watt-Hours)  |                      |
+| 30515 (362) <br /> 30516 (363) <br /> 30517 (364) <br /> 30518 (365) | Input        | Float64   | Custom Category 9 Energy Out  | Wh (Watt-Hours)  |                      |
+| 30519 (358) <br /> 30520 (359) <br /> 30521 (360) <br /> 30522 (361) | Input        | Float64   | Custom Category 9 Money In    | Money            |                      |
+| 30523 (362) <br /> 30524 (363) <br /> 30525 (364) <br /> 30526 (365) | Input        | Float64   | Custom Category 9 Money Out   | Money            |                      |
