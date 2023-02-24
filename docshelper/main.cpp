@@ -1,6 +1,7 @@
 #include <QCoreApplication>
 #include <QCommandLineParser>
 #include <QFile>
+#include <QRegularExpression>
 
 namespace {
 // will be called for each modbus table on the page
@@ -37,20 +38,73 @@ QString processTable(QString content)
         rows.removeFirst();
     }
 
+    const QRegularExpression setAddrExpr{"\\<!-- MODBUS-SET-ADDR: ([0-9]+) --\\>"};
+    const QRegularExpression skipAddrExpr{"\\<!-- MODBUS-SKIP-ADDR: ([0-9]+) --\\>"};
+
+    int address{30001};
     for (auto &row : rows)
     {
-        int registers{};
-        if (row.size() > 2)
+        if (!row.isEmpty())
         {
-            if (const auto &type = row.at(2); type == "Float32")
-                registers = 2;
-            else if (type == "Float64")
-                registers = 4;
-            else
-                qWarning() << "unknown register type" << type;
+            const auto &first = row.first();
+            if (const auto &match = setAddrExpr.match(first); match.hasMatch())
+            {
+                bool ok{};
+                int newAddress = match.captured(1).toInt(&ok);
+                if (ok)
+                    address = newAddress;
+                else
+                    qWarning() << "invalid set-addr opcode:" << match.captured(0);
+                continue;
+            }
+            else if (const auto &match = skipAddrExpr.match(first); match.hasMatch())
+            {
+                bool ok{};
+                int addressOffset = match.captured(1).toInt(&ok);
+                if (ok)
+                    address += addressOffset;
+                else
+                    qWarning() << "invalid skip-addr opcode:" << match.captured(0);
+                continue;
+            }
         }
-        else
+
+        if (row.size() < 1)
+        {
+            qWarning() << "register addr missing";
+            continue;
+        }
+        if (row.size() < 2)
+        {
             qWarning() << "register type missing";
+            continue;
+        }
+        if (row.size() < 3)
+        {
+            qWarning() << "register datatype missing";
+            continue;
+        }
+
+        int registers;
+
+        if (const auto &type = row.at(2); type == "Float32")
+            registers = 2;
+        else if (type == "Float64")
+            registers = 4;
+        else
+        {
+            qWarning() << "unknown register type" << type;
+            continue;
+        }
+
+        QString addr;
+        for (int i = 0; i < registers; i++)
+        {
+            if (!addr.isEmpty())
+                addr += " <br /> ";
+            addr += QString("%0 (%1)").arg(address++).arg(address > 40000 ? address-40002 : (address > 30000 ? address-30002 : -1));
+        }
+        row[0] = addr;
     }
 
     QVector<int> columnWidths;
@@ -90,6 +144,7 @@ QString processTable(QString content)
         return result;
     };
 
+    result += "| ";
     for (int i = 0; i < columnWidths.size(); i++)
     {
         if (i > 0)
@@ -99,21 +154,20 @@ QString processTable(QString content)
         else
             result += makeCell("??", columnWidths[i], QChar{' '});
     }
+    result += " |\n";
 
-    result += "\n";
-
+    result += "| ";
     for (int i = 0; i < columnWidths.size(); i++)
     {
         if (i > 0)
             result += " | ";
         result += makeCell("-", columnWidths[i], QChar{'-'});
     }
-
-    result += "\n";
+    result += " |\n";
 
     for (const auto &row : rows)
     {
-        qDebug() << row;
+        result += "| ";
         for (int i = 0; i < columnWidths.size(); i++)
         {
             if (i > 0)
@@ -123,7 +177,7 @@ QString processTable(QString content)
             else
                 result += makeCell("", columnWidths[i], QChar{' '});
         }
-        result += "\n";
+        result += " |\n";
     }
 
     return result;
@@ -156,23 +210,22 @@ int main(int argc, char *argv[])
         return -2;
     }
 
+    const auto &fileName = positionalArguments.first();
+
     QString content;
 
+    QFile file{fileName};
+    if (!file.open(QIODevice::ReadWrite))
     {
-        QFile file{positionalArguments.first()};
-        if (!file.open(QIODevice::ReadOnly))
-        {
-            qFatal("could not open input file: %s", qPrintable(file.errorString()));
-            return -3;
-        }
-
-        content = file.readAll();
+        qFatal("could not open input file: %s", qPrintable(file.errorString()));
+        return -3;
     }
 
-    QFile file{positionalArguments.first() + ".tmp"};
-    if (!file.open(QIODevice::WriteOnly))
+    content = file.readAll();
+
+    if (!file.seek(0))
     {
-        qFatal("could not open output file: %s", qPrintable(file.errorString()));
+        qFatal("could not seek to begin: %s", qPrintable(file.errorString()));
         return -4;
     }
 
@@ -229,13 +282,19 @@ int main(int argc, char *argv[])
         }
     }
 
-//    if (file.size() > file.pos())
+    if (file.size() > file.pos())
+    {
+        if (!file.resize(file.pos()))
+        {
+            qFatal("could not resize (shrink) file: %s", qPrintable(file.errorString()));
+            return -8;
+        }
+    }
+
+//    if (!file.rename(fileName))
 //    {
-//        if (!file.resize(file.pos()))
-//        {
-//            qFatal("could not resize (shrink) file: %s", qPrintable(file.errorString()));
-//            return -8;
-//        }
+//        qFatal("could not rename generated file: %s", qPrintable(file.errorString()));
+//        return -9;
 //    }
 
     return 0;
