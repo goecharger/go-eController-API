@@ -43,7 +43,7 @@ Beispiel: http://192.168.0.77/api/set?men=true
 | mwo     | modbus slave Schreib-Operationen | size_t  | R    | Status    |
 
 ## Modbus Profil
-
+<!-- MODBUS TABLE BEGIN -->
 | Register                                                                 | Registertyp  | Datentyp  | Name                          | Einheit          | Beschreibung         |
 | --------------------------------------------------------------------     | ------------ | --------- | ----------------------------- | ---------------- | -------------------- |
 | 31001 (1000) <br /> 31002 (1001)                                         | Input        | Float32   | Voltage L1                    | V (Volt)         |                      |
@@ -197,3 +197,4 @@ Beispiel: http://192.168.0.77/api/set?men=true
 | 31419 (1418) <br /> 31420 (1419) <br /> 31421 (1420) <br /> 31422 (1421) | Input        | Float64   | Custom Category 9 Energy Out  | Wh (Watt-Hours)  |                      |
 | 31423 (1422) <br /> 31424 (1423) <br /> 31425 (1424) <br /> 31426 (1425) | Input        | Float64   | Custom Category 9 Money In    | Money            |                      |
 | 31427 (1426) <br /> 31428 (1427) <br /> 31429 (1428) <br /> 31430 (1429) | Input        | Float64   | Custom Category 9 Money Out   | Money            |                      |
+<!-- MODBUS TABLE END -->
