@@ -96,6 +96,18 @@ QString processTable(QString content)
             registers = 2;
         else if (type == "Float64")
             registers = 4;
+        else if (type == "Int16")
+            registers = 1;
+        else if (type == "UInt16")
+            registers = 1;
+        else if (type == "Int32")
+            registers = 2;
+        else if (type == "UInt32")
+            registers = 2;
+        else if (type == "Int64")
+            registers = 4;
+        else if (type == "UInt64")
+            registers = 4;
         else
         {
             qWarning() << "unknown register type" << type;
