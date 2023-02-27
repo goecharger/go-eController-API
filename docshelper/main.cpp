@@ -2,6 +2,11 @@
 #include <QCommandLineParser>
 #include <QFile>
 #include <QRegularExpression>
+#include <QDebug>
+
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+#define SHITTY_UBUNTU_QT
+#endif
 
 namespace {
 // will be called for each modbus table on the page
@@ -110,8 +115,14 @@ QString processTable(QString content)
     QVector<int> columnWidths;
     for (const auto &row : rows)
     {
+#ifdef SHITTY_UBUNTU_QT
+        // shitty ubuntu version of Qt doesnt have .resize()
+        while (columnWidths.size() < row.size())
+            columnWidths << 0;
+#else
         if (columnWidths.size() < row.size())
             columnWidths.resize(row.size(), 0);
+#endif
         int i{};
         for (const auto &cell : row)
         {
@@ -122,8 +133,14 @@ QString processTable(QString content)
     }
 
     {
+#ifdef SHITTY_UBUNTU_QT
+        // shitty ubuntu version of Qt doesnt have .resize()
+        while (columnWidths.size() < columnNames.size())
+            columnWidths << 0;
+#else
         if (columnWidths.size() < columnNames.size())
             columnWidths.resize(columnNames.size(), 0);
+#endif
 
         int i{};
         for (const auto &cell : columnNames)
@@ -235,7 +252,12 @@ int main(int argc, char *argv[])
 
         {
             constexpr std::string_view modbusTableBegin = "<!-- MODBUS TABLE BEGIN -->\n";
+#ifdef SHITTY_UBUNTU_QT
+            // shitty ubuntu version of Qt doesnt provide QByteArrayView
+            index = content.indexOf(QString::fromUtf8(modbusTableBegin.data(), modbusTableBegin.size()));
+#else
             index = content.indexOf(QString::fromUtf8(QByteArrayView{modbusTableBegin}));
+#endif
             if (index == -1)
                 break;
 
@@ -246,15 +268,30 @@ int main(int argc, char *argv[])
         {
             if (const auto written = file.write(asByteArray); written != asByteArray.size())
             {
+#ifdef SHITTY_UBUNTU_QT
+                // shitty ubuntu version of Qt uses int for array lengths
+                qFatal("written!=size %lli %i", written, asByteArray.size());
+#else
                 qFatal("written!=size %lli %lli", written, asByteArray.size());
+#endif
                 return -5;
             }
         }
 
+#ifdef SHITTY_UBUNTU_QT
+        // shitty ubuntu version of Qt doesnt provide std api to manipulate containers
+        content.remove(0, index);
+#else
         content.erase(std::begin(content), std::begin(content) + index);
+#endif
 
         constexpr std::string_view modbusTableEnd = "<!-- MODBUS TABLE END -->";
+#ifdef SHITTY_UBUNTU_QT
+        // shitty ubuntu version of Qt doesnt provide QByteArrayView
+        index = content.indexOf(QString::fromUtf8(modbusTableEnd.data(), modbusTableEnd.size()));
+#else
         index = content.indexOf(QString::fromUtf8(QByteArrayView{modbusTableEnd}));
+#endif
         if (index == -1)
         {
             qWarning() << "table end missing";
@@ -265,19 +302,34 @@ int main(int argc, char *argv[])
         {
             if (const auto written = file.write(asByteArray); written != asByteArray.size())
             {
+#ifdef SHITTY_UBUNTU_QT
+                // shitty ubuntu version of Qt uses int for array lengths
+                qFatal("written!=size %lli %i", written, asByteArray.size());
+#else
                 qFatal("written!=size %lli %lli", written, asByteArray.size());
+#endif
                 return -6;
             }
         }
 
+#ifdef SHITTY_UBUNTU_QT
+        // shitty ubuntu version of Qt doesnt provide std api to manipulate containers
+        content.remove(0, index);
+#else
         content.erase(std::begin(content), std::begin(content) + index);
+#endif
     }
 
     if (auto asByteArray = content.toUtf8(); !asByteArray.isEmpty())
     {
         if (const auto written = file.write(asByteArray); written != asByteArray.size())
         {
+#ifdef SHITTY_UBUNTU_QT
+            // shitty ubuntu version of Qt uses int for array lengths
+            qFatal("written!=size %lli %i", written, asByteArray.size());
+#else
             qFatal("written!=size %lli %lli", written, asByteArray.size());
+#endif
             return -7;
         }
     }
