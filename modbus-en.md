@@ -105,7 +105,7 @@ Data in this table can be read with modbus function 04.
 | 31125 (1124) <br /> 31126 (1125)                                         | Input        | Float32  | Category Relais Current L1   | A (Ampere)       |             |
 | 31127 (1126) <br /> 31128 (1127)                                         | Input        | Float32  | Category Relais Current L2   | A (Ampere)       |             |
 | 31129 (1128) <br /> 31130 (1129)                                         | Input        | Float32  | Category Relais Current L3   | A (Ampere)       |             |
-| 31131 (1130) <br /> 31132 (1131)                                         | Input        | Float32  | Category Relais Current L3N  | A (Ampere)       |             |
+| 31131 (1130) <br /> 31132 (1131)                                         | Input        | Float32  | Category Relais Current LN   | A (Ampere)       |             |
 | 31133 (1132) <br /> 31134 (1133)                                         | Input        | Float32  | Category Relais Power        | W (Watt)         |             |
 | 31135 (1134) <br /> 31136 (1135) <br /> 31137 (1136) <br /> 31138 (1137) | Input        | Float64  | Category Relais Energy In    | Wh (Watt-Hours)  |             |
 | 31139 (1138) <br /> 31140 (1139) <br /> 31141 (1140) <br /> 31142 (1141) | Input        | Float64  | Category Relais Energy Out   | Wh (Watt-Hours)  |             |
