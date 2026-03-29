@@ -35,7 +35,7 @@ Authorization: Bearer <b>myapitoken</b>
 
 Falls die Authentifizierung mittels GET Parameter erfolgen soll, ist der Authentifizierungstoken als **token** Parameter anzugeben:
 <pre>
-https://<b>serial_number</b>.api.v3.go-e.ioapi/status?token=<b>myapitoken</b>
+https://<b>serial_number</b>.api.v3.go-e.io/api/status?token=<b>myapitoken</b>
 </pre>
 
 
