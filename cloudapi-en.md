@@ -20,8 +20,8 @@ Rate limiting is not used. However, it makes no sense to do more than one query 
 
 The URLs for querying or setting the parameters on the go-eController are:
 <pre>
-https://<b>serial_number</b>.api.controller.go-e.io/api/status
-https://<b>serial_number</b>.api.controller.go-e.io/api/set
+https://<b>serial_number</b>.api.v3.go-e.io/api/status
+https://<b>serial_number</b>.api.v3.go-e.io/api/set
 </pre>
 
 Whereby **serial_number** must be replaced by the respective 6-digit serial number of the Controller - with leading 0s
@@ -34,7 +34,7 @@ Authorization: Bearer <b>api-key</b>
 
 If the authentication is done by using the GET parameter, the authentication token must be specified as a **token** parameter:
 <pre>
-https://<b>serial_number</b>.api.controller.go-e.io/api/status?token=<b>api-token</b>
+https://<b>serial_number</b>.api.v3.go-e.io/api/status?token=<b>api-token</b>
 </pre>
 
 
@@ -57,7 +57,7 @@ Any time period can be set by setting the GET parameter. However, there is no gu
 
 Example:
 <pre>
-https://000001.api.controller.go-e.io/api/status?token=myapitoken<b>&age=5</b>
+https://000001.api.v3.go-e.io/api/status?token=myapitoken<b>&age=5</b>
 </pre>
 
 ### filter parameter
@@ -65,7 +65,7 @@ The GET parameter `filter` can be used to select which api keys of the Controlle
 
 Example:
 <pre>
-https://000001.api.controller.go-e.io/api/status?token=myapitoken&age=5<b>&filter=ccn,ccp,cec</b>
+https://000001.api.v3.go-e.io/api/status?token=myapitoken&age=5<b>&filter=ccn,ccp,cec</b>
 </pre>
 
 ## /api/set
@@ -83,5 +83,5 @@ In order to be able to distinguish numerical values from strings, strings should
 
 Example:
 <pre>
-https://000001.api.controller.go-e.io/api/set?<i>token=myapitoken</i>&<b>fna="my go-eController"</b>
+https://000001.api.v3.go-e.io/api/set?<i>token=myapitoken</i>&<b>fna="my go-eController"</b>
 </pre>

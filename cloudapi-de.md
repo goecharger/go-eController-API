@@ -20,8 +20,9 @@ Rate limiting ist nicht vorgesehen. Es macht jedoch keinen Sinn mehr als eine Ab
 
 Die URLs zum Abfragen bzw Setzen der Parameter am go-eController lauten:
 <pre>
-https://<b>serial_number</b>.api.controller.go-e.io/api/status
-https://<b>serial_number</b>.api.controller.go-e.io/api/set
+https://<b>serial_number</b>.api.v3.go-e.io/api/status
+https://<b>serial_number</b>.api.v3.go-e.io/api/set
+
 </pre>
 
 Wobei **serial_number** durch die jeweilige 6-stellige Seriennummer des Controllers ersetzt werden muss - mit führenden 0
@@ -34,7 +35,7 @@ Authorization: Bearer <b>myapitoken</b>
 
 Falls die Authentifizierung mittels GET Parameter erfolgen soll, ist der Authentifizierungstoken als **token** Parameter anzugeben:
 <pre>
-https://<b>serial_number</b>.api.controller.go-e.io/api/status?token=<b>myapitoken</b>
+https://<b>serial_number</b>.api.v3.go-e.ioapi/status?token=<b>myapitoken</b>
 </pre>
 
 
@@ -57,7 +58,7 @@ Durch setzen des GET Parameters kann ein beliebiger Zeitraum eingestellt werden.
 
 Beispiel:
 <pre>
-https://000001.api.controller.go-e.io/api/status?token=myapitoken<b>&age=5</b>
+https://000001.api.v3.go-e.io/api/status?token=myapitoken<b>&age=5</b>
 </pre>
 
 ### filter Parameter
@@ -65,7 +66,7 @@ Mit dem GET Parameter `filter` kann ausgewählt werden, welche api keys des Cont
 
 Beispiel:
 <pre>
-https://000001.api.controller.go-e.io/api/status?token=myapitoken&age=5<b>&filter=ccn,ccp,cec</b>
+https://000001.api.v3.go-e.io/api/status?token=myapitoken&age=5<b>&filter=ccn,ccp,cec</b>
 </pre>
 
 ## /api/set
@@ -83,5 +84,5 @@ Um numerische Werte von Strings zu unterscheiden zu können, sollten Strings mit
 
 Beispiel:
 <pre>
-https://000001.api.controller.go-e.io/api/set?<i>token=myapitoken</i>&<b>fna="my go-eController"</b>
+https://000001.api.v3.go-e.io/api/set?<i>token=myapitoken</i>&<b>fna="my go-eController"</b>
 </pre>
