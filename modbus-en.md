@@ -56,7 +56,7 @@ Data in this table can be read with modbus function 04.
 | 31003 (1002) <br /> 31004 (1003)                                         | Input        | Float32  | Voltage L2                   | V (Volt)         |             |
 | 31005 (1004) <br /> 31006 (1005)                                         | Input        | Float32  | Voltage L3                   | V (Volt)         |             |
 | 31007 (1006) <br /> 31008 (1007)                                         | Input        | Float32  | Voltage N                    | V (Volt)         |             |
-| 31009 (1008) <br /> 31010 (1009)                                         | Input        | Float32  | Frequency                    | Hz (Herz)        |    not implemented         |
+| 31009 (1008) <br /> 31010 (1009)                                         | Input        | Float32  | Frequency                    | Hz (Herz)        | not implemented         |
 | 31011 (1010) <br /> 31012 (1011)                                         | Input        | Float32  | Current Sensor 1 Current     | A (Ampere)       |             |
 | 31013 (1012) <br /> 31014 (1013)                                         | Input        | Float32  | Current Sensor 2 Current     | A (Ampere)       |             |
 | 31015 (1014) <br /> 31016 (1015)                                         | Input        | Float32  | Current Sensor 3 Current     | A (Ampere)       |             |
@@ -82,8 +82,8 @@ Data in this table can be read with modbus function 04.
 | 31055 (1054) <br /> 31056 (1055)                                         | Input        | Float32  | Category Home Power          | W (Watt)         |             |
 | 31057 (1056) <br /> 31058 (1057) <br /> 31059 (1058) <br /> 31060 (1059) | Input        | Float64  | Category Home Energy In      | Wh (Watt-Hours)  |             |
 | 31061 (1060) <br /> 31062 (1061) <br /> 31063 (1062) <br /> 31064 (1063) | Input        | Float64  | Category Home Energy Out     | Wh (Watt-Hours)  |             |
-| 31065 (1064) <br /> 31066 (1065) <br /> 31067 (1066) <br /> 31068 (1067) | Input        | Float64  | Category Home Money In       | Money            |   not implemented          |
-| 31069 (1068) <br /> 31070 (1069) <br /> 31071 (1070) <br /> 31072 (1071) | Input        | Float64  | Category Home Money Out      | Money            |   not implemented          |
+| 31065 (1064) <br /> 31066 (1065) <br /> 31067 (1066) <br /> 31068 (1067) | Input        | Float64  | Category Home Money In       | Money            | not implemented          |
+| 31069 (1068) <br /> 31070 (1069) <br /> 31071 (1070) <br /> 31072 (1071) | Input        | Float64  | Category Home Money Out      | Money            | not implemented          |
 | 31073 (1072) <br /> 31074 (1073)                                         | Input        | Float32  | Category Grid Current L1     | A (Ampere)       |             |
 | 31075 (1074) <br /> 31076 (1075)                                         | Input        | Float32  | Category Grid Current L2     | A (Ampere)       |             |
 | 31077 (1076) <br /> 31078 (1077)                                         | Input        | Float32  | Category Grid Current L3     | A (Ampere)       |             |
@@ -91,8 +91,8 @@ Data in this table can be read with modbus function 04.
 | 31081 (1080) <br /> 31082 (1081)                                         | Input        | Float32  | Category Grid Power          | W (Watt)         |             |
 | 31083 (1082) <br /> 31084 (1083) <br /> 31085 (1084) <br /> 31086 (1085) | Input        | Float64  | Category Grid Energy In      | Wh (Watt-Hours)  |             |
 | 31087 (1086) <br /> 31088 (1087) <br /> 31089 (1088) <br /> 31090 (1089) | Input        | Float64  | Category Grid Energy Out     | Wh (Watt-Hours)  |             |
-| 31091 (1090) <br /> 31092 (1091) <br /> 31093 (1092) <br /> 31094 (1093) | Input        | Float64  | Category Grid Money In       | Money            |   not implemented          |
-| 31095 (1094) <br /> 31096 (1095) <br /> 31097 (1096) <br /> 31098 (1097) | Input        | Float64  | Category Grid Money Out      | Money            |   not implemented          |
+| 31091 (1090) <br /> 31092 (1091) <br /> 31093 (1092) <br /> 31094 (1093) | Input        | Float64  | Category Grid Money In       | Money            | not implemented          |
+| 31095 (1094) <br /> 31096 (1095) <br /> 31097 (1096) <br /> 31098 (1097) | Input        | Float64  | Category Grid Money Out      | Money            | not implemented          |
 | 31099 (1098) <br /> 31100 (1099)                                         | Input        | Float32  | Category Car Current L1      | A (Ampere)       |             |
 | 31101 (1100) <br /> 31102 (1101)                                         | Input        | Float32  | Category Car Current L2      | A (Ampere)       |             |
 | 31103 (1102) <br /> 31104 (1103)                                         | Input        | Float32  | Category Car Current L3      | A (Ampere)       |             |
@@ -118,8 +118,8 @@ Data in this table can be read with modbus function 04.
 | 31159 (1158) <br /> 31160 (1159)                                         | Input        | Float32  | Category Solar Power         | W (Watt)         |             |
 | 31161 (1160) <br /> 31162 (1161) <br /> 31163 (1162) <br /> 31164 (1163) | Input        | Float64  | Category Solar Energy In     | Wh (Watt-Hours)  |             |
 | 31165 (1164) <br /> 31166 (1165) <br /> 31167 (1166) <br /> 31168 (1167) | Input        | Float64  | Category Solar Energy Out    | Wh (Watt-Hours)  |             |
-| 31169 (1168) <br /> 31170 (1169) <br /> 31171 (1170) <br /> 31172 (1171) | Input        | Float64  | Category Solar Money In      | Money            |  not implemented           |
-| 31173 (1172) <br /> 31174 (1173) <br /> 31175 (1174) <br /> 31176 (1175) | Input        | Float64  | Category Solar Money Out     | Money            |   not implemented          |
+| 31169 (1168) <br /> 31170 (1169) <br /> 31171 (1170) <br /> 31172 (1171) | Input        | Float64  | Category Solar Money In      | Money            | not implemented           |
+| 31173 (1172) <br /> 31174 (1173) <br /> 31175 (1174) <br /> 31176 (1175) | Input        | Float64  | Category Solar Money Out     | Money            | not implemented          |
 | 31177 (1176) <br /> 31178 (1177)                                         | Input        | Float32  | Category Akku Current L1     | A (Ampere)       |             |
 | 31179 (1178) <br /> 31180 (1179)                                         | Input        | Float32  | Category Akku Current L2     | A (Ampere)       |             |
 | 31181 (1180) <br /> 31182 (1181)                                         | Input        | Float32  | Category Akku Current L3     | A (Ampere)       |             |
@@ -127,8 +127,8 @@ Data in this table can be read with modbus function 04.
 | 31185 (1184) <br /> 31186 (1185)                                         | Input        | Float32  | Category Akku Power          | W (Watt)         |             |
 | 31187 (1186) <br /> 31188 (1187) <br /> 31189 (1188) <br /> 31190 (1189) | Input        | Float64  | Category Akku Energy In      | Wh (Watt-Hours)  |             |
 | 31191 (1190) <br /> 31192 (1191) <br /> 31193 (1192) <br /> 31194 (1193) | Input        | Float64  | Category Akku Energy Out     | Wh (Watt-Hours)  |             |
-| 31195 (1194) <br /> 31196 (1195) <br /> 31197 (1196) <br /> 31198 (1197) | Input        | Float64  | Category Akku Money In       | Money            |  not implemented           |
-| 31199 (1198) <br /> 31200 (1199) <br /> 31201 (1200) <br /> 31202 (1201) | Input        | Float64  | Category Akku Money Out      | Money            |  not implemented           |
+| 31195 (1194) <br /> 31196 (1195) <br /> 31197 (1196) <br /> 31198 (1197) | Input        | Float64  | Category Akku Money In       | Money            | not implemented           |
+| 31199 (1198) <br /> 31200 (1199) <br /> 31201 (1200) <br /> 31202 (1201) | Input        | Float64  | Category Akku Money Out      | Money            | not implemented           |
 | 31307 (1306) <br /> 31308 (1307)                                         | Input        | Float32  | Custom Category 0 Current L1 | A (Ampere)       |             |
 | 31309 (1308) <br /> 31310 (1309)                                         | Input        | Float32  | Custom Category 0 Current L2 | A (Ampere)       |             |
 | 31311 (1310) <br /> 31312 (1311)                                         | Input        | Float32  | Custom Category 0 Current L3 | A (Ampere)       |             |
