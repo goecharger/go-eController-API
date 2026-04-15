@@ -129,10 +129,6 @@ Data in this table can be read with modbus function 04.
 | 31191 (1190) <br /> 31192 (1191) <br /> 31193 (1192) <br /> 31194 (1193) | Input        | Float64  | Category Akku Energy Out     | Wh (Watt-Hours)  |             |
 | 31195 (1194) <br /> 31196 (1195) <br /> 31197 (1196) <br /> 31198 (1197) | Input        | Float64  | Category Akku Money In       | Money            |  not implemented           |
 | 31199 (1198) <br /> 31200 (1199) <br /> 31201 (1200) <br /> 31202 (1201) | Input        | Float64  | Category Akku Money Out      | Money            |  not implemented           |
-| <!-- MODBUS-SKIP-ADDR: 26 -->                                            |              |          |                              |                  |             |
-| <!-- MODBUS-SKIP-ADDR: 26 -->                                            |              |          |                              |                  |             |
-| <!-- MODBUS-SKIP-ADDR: 26 -->                                            |              |          |                              |                  |             |
-| <!-- MODBUS-SKIP-ADDR: 26 -->                                            |              |          |                              |                  |             |
 | 31307 (1306) <br /> 31308 (1307)                                         | Input        | Float32  | Custom Category 0 Current L1 | A (Ampere)       |             |
 | 31309 (1308) <br /> 31310 (1309)                                         | Input        | Float32  | Custom Category 0 Current L2 | A (Ampere)       |             |
 | 31311 (1310) <br /> 31312 (1311)                                         | Input        | Float32  | Custom Category 0 Current L3 | A (Ampere)       |             |
